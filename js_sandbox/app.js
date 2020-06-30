@@ -1,33 +1,42 @@
-// Const
-
-const person = {
-  name: 'John',
-  age: 30,
-};
-
-// can mutate but not reassign a const
-person.name = 'Sara';
-person.age = 42;
-
-console.log(person);
-
-const numbers = [1, 2, 3, 4, 5];
-numbers.push(6);
-console.log(numbers);
-
-// Primitive Data Types:
+// PRIMITIVE TYPES
 
 // String
+const name = 'John Doe';
+console.log(typeof name);
+
 // Number
+const age = 45;
+console.log(typeof age);
+
 // Boolean
-// null
-// undefined
-// Symbols (ES6)
+const hasKids = true;
+console.log(typeof hasKids);
 
-// Reference Types
+// Null
+const car = null;
+console.log(typeof car);
 
-// Arrays
-// Object Literals
-// Functions
-// Dates
-// Anything else
+// Undefined
+let test = undefined;
+console.log(typeof test);
+
+// Symbol
+const sym = Symbol();
+console.log(typeof sym);
+
+// REFERENCE TYPES
+// Array
+const hobbies = ['movies', 'music'];
+console.log(typeof hobbies);
+
+// Object literal
+const address = {
+  city: 'Boston',
+  state: 'MA',
+};
+console.log(typeof address);
+
+// Date
+const today = new Date();
+console.log(today);
+console.log(typeof today);
