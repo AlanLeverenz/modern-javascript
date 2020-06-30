@@ -1,42 +1,39 @@
-// PRIMITIVE TYPES
+let val;
 
-// String
-const name = 'John Doe';
-console.log(typeof name);
+// Number to string
+val = String(555);
+val = String(4 + 4);
 
-// Number
-const age = 45;
-console.log(typeof age);
+// Date to string
+val = String(new Date());
 
-// Boolean
-const hasKids = true;
-console.log(typeof hasKids);
+// Array to string
+val = String([1, 2, 3, 4]);
 
-// Null
-const car = null;
-console.log(typeof car);
+// toString()
+val = (5).toString();
+val = true.toString();
 
-// Undefined
-let test = undefined;
-console.log(typeof test);
+// String to number
+val = Number('5');
+val = Number(true);
+val = Number(false);
+val = Number(null);
+val = Number('hello');
 
-// Symbol
-const sym = Symbol();
-console.log(typeof sym);
+val = parseInt('100.30');
+val = parseFloat('100.30');
 
-// REFERENCE TYPES
-// Array
-const hobbies = ['movies', 'music'];
-console.log(typeof hobbies);
+// Output
+// console.log(val);
+// console.log(typeof val);
+// // console.log(val.length);
+// console.log(val.toFixed(2));
 
-// Object literal
-const address = {
-  city: 'Boston',
-  state: 'MA',
-};
-console.log(typeof address);
+// Type Coercion
+const val1 = String(5);
+const val2 = 6;
+const sum = Number(val1 + val2);
 
-// Date
-const today = new Date();
-console.log(today);
-console.log(typeof today);
+console.log(sum);
+console.log(typeof sum);
