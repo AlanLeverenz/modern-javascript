@@ -47,7 +47,7 @@ liOdd.forEach(function (li, index) {
   li.style.background = '#ccc';
 });
 
-// can still use for loop on an HTML collection
+// can use 'for' loop on an HTML collection
 for (let i = 0; i < liEven.length; i++) {
   liEven[i].style.background = '#f0f0f0';
 }
