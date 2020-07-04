@@ -1,55 +1,61 @@
-// Get elements by classname
-// document.getElementsByClassName
+// Traversing the DOM
 
-// const items = document.getElementsByClassName('collection-item');
-// console.log(items);
-// console.log(items[0]);
-// items[0].style.color = 'red';
-// items[3].textContent = 'Hello';
+let val;
 
-// const listItems = document
-//   .querySelector('ul')
-//   .getElementsByClassName('collection-item');
+const list = document.querySelector('ul.collection');
+const listItem = document.querySelector('li.collection-item:first-child');
 
-// console.log(listItems);
+val = listItem;
+val = list;
 
-// // document.getElementsbyTagName
-// let lis = document.getElementsByTagName('li');
-// console.log(lis);
-// console.log(lis[0]);
-// lis[0].style.color = 'red';
-// lis[3].textContent = 'Hello';
+// Get child nodes (also counts line breaks) > Nodelist
+val = list.childNodes;
+val = list.childNodes[0];
+val = list.childNodes[0].nodeName;
+val = list.childNodes[1].nodeType;
 
-// // Convert HTML collection into array
-// lis = Array.from(lis);
-// // apply array method
-// lis.reverse();
-// // apply forEach to list class names
-// lis.forEach(function (li, index) {
-//   console.log(li.className);
-//   li.textContent = `${index}: Hello`;
-// });
+// Node types
+// 1 - Element
+// 2 - Attribute (deprecated)
+// 3 - Text node
+// 8 - Comment
+// 9 - Document itselfr
+// 10 - Doctype
 
-// console.log(lis);
+// Get children element nodes > HTML Collection
+val = list.children;
+val = list.children[1];
+list.children[1].textContent = 'Hello';
+// Children of children
+list.children[3].children[0].id = 'test-link';
+val = list.children[3].children;
 
-// document.querySelectorAll
-const items = document.querySelectorAll('ul.collection li.collection-item');
+// firstChild = will show text nodes
+val = list.firstChild;
+// firstElementChild = will show element node
+val = list.firstElementChild;
 
-items.forEach(function (item, index) {
-  item.textContent = `${index}: Hello`;
-});
+// Last child
+val = list.lastChild;
+val = list.lastElementChild;
+// will count child elements
+val = list.childElementCount;
 
-// odd and even items
-const liOdd = document.querySelectorAll('li:nth-child(odd)');
-const liEven = document.querySelectorAll('li:nth-child(even)');
+// Get parent node
+val = listItem.parentNode;
 
-liOdd.forEach(function (li, index) {
-  li.style.background = '#ccc';
-});
+// get parentElement;
+val = listItem.parentElement;
 
-// can use 'for' loop on an HTML collection
-for (let i = 0; i < liEven.length; i++) {
-  liEven[i].style.background = '#f0f0f0';
-}
+// get parent of parent
+val = listItem.parentElement.parentElement;
 
-console.log(items);
+// Get next sibling
+val = listItem.nextSibling;
+val = listItem.nextElementSibling.nextElementSibling.previousElementSibling;
+
+// Get previous sibling
+val = listItem.previousSibling;
+val = listItem.previousElementSibling;
+
+console.log(val);
