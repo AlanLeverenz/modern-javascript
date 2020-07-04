@@ -1,35 +1,55 @@
-// document.getElementById()
-console.log(document.getElementById('task-title'));
+// Get elements by classname
+// document.getElementsByClassName
 
-// Get things from the element
-console.log(document.getElementById('task-title').id);
-console.log(document.getElementById('task-title').className);
+// const items = document.getElementsByClassName('collection-item');
+// console.log(items);
+// console.log(items[0]);
+// items[0].style.color = 'red';
+// items[3].textContent = 'Hello';
 
-// Assign to const
-const taskTitle = document.getElementById('task-title');
+// const listItems = document
+//   .querySelector('ul')
+//   .getElementsByClassName('collection-item');
 
-// Change styling
-document.getElementById('task-title').style.background = '#333';
-document.getElementById('task-title').style.color = '#fff';
-document.getElementById('task-title').style.padding = '5px';
-// document.getElementById('task-title').style.display = 'none';
+// console.log(listItems);
 
-// Change content
-document.getElementById('task-title').textContent = 'Task List';
-document.getElementById('task-title').innerText = 'My Task List';
-taskTitle.innerHTML = '<span style="color:red">Task List</span>';
+// // document.getElementsbyTagName
+// let lis = document.getElementsByTagName('li');
+// console.log(lis);
+// console.log(lis[0]);
+// lis[0].style.color = 'red';
+// lis[3].textContent = 'Hello';
 
-// document.querySelector()
+// // Convert HTML collection into array
+// lis = Array.from(lis);
+// // apply array method
+// lis.reverse();
+// // apply forEach to list class names
+// lis.forEach(function (li, index) {
+//   console.log(li.className);
+//   li.textContent = `${index}: Hello`;
+// });
 
-console.log(document.querySelector('#task-title'));
-console.log(document.querySelector('.card-title'));
-console.log(document.querySelector('h5'));
+// console.log(lis);
 
-document.querySelector('li').style.color = 'red';
-document.querySelector('ul li').style.color = 'blue';
+// document.querySelectorAll
+const items = document.querySelectorAll('ul.collection li.collection-item');
 
-document.querySelector('li:last-child').style.color = 'red';
-document.querySelector('li:nth-child(3)').style.color = 'orange';
-document.querySelector('li:nth-child(3)').textContent = 'Hello World';
-document.querySelector('li:nth-child(odd)').style.background = '#ccc';
-document.querySelector('li:nth-child(even)').style.background = '#f4f4f4';
+items.forEach(function (item, index) {
+  item.textContent = `${index}: Hello`;
+});
+
+// odd and even items
+const liOdd = document.querySelectorAll('li:nth-child(odd)');
+const liEven = document.querySelectorAll('li:nth-child(even)');
+
+liOdd.forEach(function (li, index) {
+  li.style.background = '#ccc';
+});
+
+// can still use for loop on an HTML collection
+for (let i = 0; i < liEven.length; i++) {
+  liEven[i].style.background = '#f0f0f0';
+}
+
+console.log(items);
