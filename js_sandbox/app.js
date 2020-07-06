@@ -1,50 +1,39 @@
-// REPLACE ELEMENT
+// document.querySelector('.clear-tasks').addEventListener('click', function (e) {
+//   console.log('Hello World');
+//   // e.preventDefault();
+// });
 
-// Create Element
-const newHeading = document.createElement('h2');
-// Add id
-newHeading.id = 'task-title';
-// New text node
-newHeading.appendChild(document.createTextNode('Task List'));
+document.querySelector('.clear-tasks').addEventListener('mouseover', onClick);
 
-//  Get the old heading
-const oldHeading = document.getElementById('task-title');
-// Parent
-const cardAction = document.querySelector('.card-action');
+function onClick(e) {
+  // console.log('Clicked');
 
-//Replace
-cardAction.replaceChild(newHeading, oldHeading);
+  let val;
 
-// REMOVE ELEMENT
-const lis = document.querySelectorAll('li');
-const list = document.querySelector('ul');
+  val = e;
 
-// Remove list item
-lis[0].remove();
+  // Event target element
+  val = e.target;
+  val = e.target.id;
+  val = e.target.className;
+  // gets the DOMTokenList
+  val = e.target.classList;
 
-//Remove child
-list.removeChild(lis[3]);
+  e.target.innerText = 'Hello';
 
-// CLASSES AND ATTRIBUTES
-const firstLi = document.querySelector('li:first-Child');
-const link = firstLi.children[0];
+  // Event type
+  val = e.type;
 
-let val;
+  // Timestemp
+  val = e.timeStamp;
 
-val = link.className;
-// creates DOMTokenList
-val = link.classList;
-val = link.classList[0];
-link.classList.add('test');
-link.classList.remove('test');
-val = link;
+  // Coords event relative to the window
+  val = e.clientY;
+  val = e.clientX;
 
-// Attributes
-val = link.getAttribute('href');
-val = link.setAttribute('href', 'http://google.com');
-link.setAttribute('title', 'Google');
-val = link.hasAttribute('title');
-link.removeAttribute('title');
-val = link;
+  // Coords event relative to the element
+  val = e.offsetY;
+  val = e.offsetX;
 
-console.log(val);
+  console.log(val);
+}
