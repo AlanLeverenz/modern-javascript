@@ -23,7 +23,7 @@ const game = document.querySelector('#game'),
 
 // Assign UI min and max
 minNum.textContent = min;
-maxNum.textContent.Content = max;
+maxNum.textContent = max;
 
 // Play again event listener
 game.addEventListener('mousedown', function (e) {
