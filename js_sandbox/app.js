@@ -1,46 +1,22 @@
-// set local storage item
-// localStorage.setItem('name', 'John');
-// localStorage.setItem('age', '30');
+// Person constructor
+function Person(name, dob) {
+  this.name = name;
+  // this.age = age;
+  this.birthday = new Date(dob);
+  this.calculateAge = function () {
+    const diff = Date.now() - this.birthday.getTime();
+    const ageDate = new Date(diff);
+    console.log(ageDate);
+    console.log(ageDate.getUTCFullYear());
+    return Math.abs(ageDate.getUTCFullYear() - 1970);
+  };
+}
 
-// set session storage item
-// sessionStorage.setItem('name', 'Beth');
+// const brad = new Person('Brad', 36);
+// const john = new Person('John', 30);
 
-// remove from storage
-// localStorage.removeItem('name');
+// console.log(john.age);
 
-// get from storage
-// const name = localStorage.getItem('name');
-// const age = localStorage.getItem('age');
+const brad = new Person('Brad', '9-10-1981');
 
-// clear local storage
-// localStorage.clear();
-
-// console.log(name, age);
-
-document.querySelector('form').addEventListener('submit', function (e) {
-  const task = document.getElementById('task').value;
-
-  // to store an array of tasks
-  let tasks;
-
-  if (localStorage.getItem('tasks') === null) {
-    tasks = [];
-  } else {
-    tasks = JSON.parse(localStorage.getItem('tasks'));
-  }
-
-  tasks.push(task);
-  console.log(tasks);
-
-  localStorage.setItem('tasks', JSON.stringify(tasks));
-  // console.log(task);
-  alert('Task saved');
-
-  e.preventDefault();
-});
-
-const tasks = JSON.parse(localStorage.getItem('tasks'));
-
-tasks.forEach(function (task) {
-  console.log(task);
-});
+console.log(brad.calculateAge());
