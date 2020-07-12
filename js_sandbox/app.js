@@ -1,53 +1,36 @@
-// Person constructor
-function Person(firstName, lastName) {
-  this.firstName = firstName;
-  this.lastName = lastName;
+// ES6 CLASSES
+// can insert functions inside the class
+class Person {
+  constructor(firstName, lastName, dob) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.birthday = new Date(dob);
+  }
+
+  greeting() {
+    return `Hello there ${this.firstName} ${this.lastName}`;
+  }
+
+  calculateAge() {
+    const diff = Date.now() - this.birthday.getTime();
+    const ageDate = new Date(diff);
+    return Math.abs(ageDate.getUTCFullYear() - 1970);
+  }
+
+  getsMarried(newLastName) {
+    this.lastName = newLastName;
+  }
+
+  // used without "this"
+  static addNumbers(x, y) {
+    return x + y;
+  }
 }
 
-// Greeting function assigned to prototype
-Person.prototype.greeting = function () {
-  return `Hello there ${this.firstName} ${this.lastName}`;
-};
+const mary = new Person('Mary', 'Williams', '11-13-1980');
 
-// create instance of Person constructor
-const person1 = new Person('John', 'Doe');
+mary.getsMarried('Thompson');
 
-console.log(person1.greeting());
+console.log(mary);
 
-// Customer constructor, use 'call' method to include Person objects
-function Customer(firstName, lastName, phone, membership) {
-  Person.call(this, firstName, lastName);
-
-  this.phone = phone;
-  this.membership = membership;
-}
-
-// Inherit the Person prototype method 'greeting()' as new object
-Customer.prototype = Object.create(Person.prototype);
-
-// Make customer.prototype return Customer() by adding as constructor
-Customer.prototype.constructor = Customer;
-
-// Create customer
-const customer1 = new Customer('Tom', 'Smith', '555-555-5555', 'Standard');
-
-// Customer greeting replaces Person greeting
-Customer.prototype.greeting = function () {
-  return `Hello there ${this.firstName} ${this.lastName} welcome to our company.`;
-};
-
-console.log(customer1);
-
-console.log(customer1.greeting());
-
-/*
-Customer {firstName: "Tom", lastName: "Smith", phone: "555-555-5555", membership: "Standard"}
-firstName: "Tom"
-lastName: "Smith"
-membership: "Standard"
-phone: "555-555-5555"
-__proto__: Person
-constructor: ƒ Customer(firstName, lastName, phone, membership)
-greeting: ƒ ()
-__proto__: Object
-*/
+console.log(Person.addNumbers(1, 2));
