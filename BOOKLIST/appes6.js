@@ -61,6 +61,43 @@ class UI {
   }
 }
 
+// Local Storage Class
+// using static functions, no need to Instantiate them
+class Store {
+  static getBooks() {
+    let books;
+    if (localStorage.getItem('books') === null) {
+      books = [];
+    } else {
+      books = JSON.parse(localStorage.getItem('books'));
+    }
+    return books;
+  }
+
+  static displaybooks() {
+    const books = Store.getBooks();
+
+    books.forEach(function (book) {
+      const ui = new UI();
+      // Add book to UI
+      ui.addBookToList(book);
+    });
+  }
+
+  static addBook(book) {
+    const books = Store.getBooks();
+
+    books.push(book);
+
+    localStorage.setItem('books', JSON.stringify(books));
+  }
+
+  static removeBook() {}
+}
+
+// DOM Load Event
+document.addEventListener('DOMContentLoaded', Store.displayBooks);
+
 // Event Listener for add book
 document.getElementById('book-form').addEventListener('submit', function (e) {
   // Get form values
@@ -84,6 +121,9 @@ document.getElementById('book-form').addEventListener('submit', function (e) {
     // Add book to list
     ui.addBookToList(book);
 
+    // Add to Local Storage
+    Store.addBook(book);
+
     // Show success
     ui.showAlert('Book Added!', 'success');
 
@@ -100,7 +140,6 @@ document.getElementById('book-list').addEventListener('click', function (e) {
   const ui = new UI();
 
   // Remove book
-
   ui.deleteBook(e.target);
 
   // Show message
