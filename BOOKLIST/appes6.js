@@ -1,4 +1,7 @@
 // ES6 Class constructors
+// NOTE: First book submitted is not activating message alert.
+// Needs a second click which duplicates the item in Local Storage.
+
 class Book {
   constructor(title, author, isbn) {
     this.title = title;
