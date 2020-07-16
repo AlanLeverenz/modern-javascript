@@ -5,8 +5,6 @@ function getJokes(e) {
 
   const xhr = new XMLHttpRequest();
 
-  console.log('hello');
-
   xhr.open('GET', `http://api.icndb.com/jokes/random/${number}`, true);
 
   xhr.onload = function () {
