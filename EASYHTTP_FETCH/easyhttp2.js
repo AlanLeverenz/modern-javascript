@@ -52,7 +52,7 @@ class EasyHTTP {
   }
 
   // Make an HTTP DELETE Request
-  delete(url, data) {
+  delete(url) {
     return new Promise((resolve, reject) => {
       fetch(url, {
         method: 'DELETE',
