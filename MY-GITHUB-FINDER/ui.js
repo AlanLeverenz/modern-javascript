@@ -15,7 +15,7 @@ class UI {
             <div class="col-md-9">
                 <span class="badge badge-primary">Public Repos: ${user.public_repos}</span>
                 <span class="badge badge-secondary">Public Gists: ${user.public_gists}</span>
-                <span class="badge badge-success">Followers: : ${user.followers}</span>
+                <span class="badge badge-success">Followers: ${user.followers}</span>
                 <span class="badge badge-info">Following: ${user.following}
                 </span>
                 <br><br>
@@ -32,13 +32,38 @@ class UI {
     `;
   }
 
+  // Show user repos
+  showRepos(repos) {
+    let output = '';
+
+    repos.forEach(function (repo) {
+      output += `
+      <div class="card card-body mb-2">
+        <div class="row">
+          <div class="col-md-6">
+            <a href="${repo.html_url}" target="_blank">${repo.name}</a>
+          </div>
+          <div class="col-md-6">
+            <span class="badge badge-primary">Stars: ${repo.stargazers_count}</span>
+            <span class="badge badge-secondary">Watchers: ${repo.watchers_count}</span>
+            <span class="badge badge-success">Forks: ${repo.forms_count}</span>
+          </div>
+        </div>
+      </div>
+    `;
+    });
+
+    // Output repositories
+    document.getElementById('repos').innerHTML = output;
+  }
+
   // Show alert message if profile not found
   showAlert(message, className) {
     // Clear any remaining alerts
     this.clearAlert();
     // Create div
     const div = document.createElement('div');
-    // Add classes
+    // Add alert className
     div.className = className;
     // Add text
     div.appendChild(document.createTextNode(message));
