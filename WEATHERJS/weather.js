@@ -26,7 +26,7 @@ class Weather {
 
   // Fetch weather from API
   async getWeather() {
-    // Fetch ID from city.list.json data from JSON-Server
+    // Fetch ID from city.list.json data using JSON-Server
     const id = await '5128638';
     console.log(this);
 
