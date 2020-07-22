@@ -1,3 +1,21 @@
+// Init weather object
+const weather = new Weather('Boston', 'MA');
+
+// get weather on DOM load
+document.addEventListener('DOMContentLoaded', getWeather);
+
+// weather.changeLocation('Miami', 'FL');
+
+function getWeather() {
+  weather
+    .getWeather()
+    .then((results) => {
+      console.log(results);
+    })
+    .catch((err) => console.log(err));
+}
+
+//******************************** */
 // const openweatherNYC5128581 = {
 //   coord: {
 //     lon: -74.01,
