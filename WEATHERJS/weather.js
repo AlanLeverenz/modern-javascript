@@ -7,43 +7,20 @@ class Weather {
 
   // Fetch weather from API
   async getWeather() {
-    // Fetch ID from city.list.json data using JSON-Server
-
+    // Fetch ID from db.json data
     const promise = await fetch('http://localhost:3000/cities');
     let value = await promise.json();
+    // console.log(value);
 
-    // use map to get index position in array of objects
-    // var elementPos = array.map(function(x) {return x.id; }).indexOf(idYourAreLookingFor - condition to satisfy?);
-    // var objectFound = array[elementPos];
-
-    // use map to single out desired value
-    //     contacts: state.contacts.map((contact) =>
-    //     contact._id === action.payload._id ? action.payload : contact
-    //   ),
-
-    // using findIndex ES6 style
-    // [{id:1},{id:2},{id:3},{id:4}].findIndex(obj => obj.id == 3)
-
-    // filter method
-    // var filteredArray = array.filter(function (element) {
-    //     return element.id === 0;
-    // });
-
-    // if loading
-    // if(loading) {
-    //     return <h4>Loading...</h4>
-    // }
-
-    let id = value[0]['id'];
-    console.log(value);
-    console.log(id);
-    // const id = await value.findIndex(['New York']);
-    // const id = await '5128638';
-    console.log(this);
+    const index = value.findIndex(
+      (i) => i.name === 'New York' && i.state === 'NY'
+    );
+    const cid = value[index].id;
+    console.log(`index: ${index}, id: ${cid}`);
 
     // Fetch city weather data from OpenWeather
     const response = await fetch(
-      `http://api.openweathermap.org/data/2.5/weather?id=${id}&appid=${this.apiKey}`
+      `http://api.openweathermap.org/data/2.5/weather?id=${cid}&appid=${this.apiKey}`
     );
 
     const responseData = await response.json();
