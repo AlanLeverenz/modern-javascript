@@ -27,7 +27,19 @@ class Weather {
   // Fetch weather from API
   async getWeather() {
     // Fetch ID from city.list.json data using JSON-Server
-    const id = await '5128638';
+
+    const promise = await fetch('http://localhost:3000/cities');
+    let value = await promise.json();
+
+    // get index position in array of objects
+    // var elementPos = array.map(function(x) {return x.id; }).indexOf(idYourAreLookingFor);
+    // var objectFound = array[elementPos];
+
+    let id = value[0]['id'];
+    console.log(value);
+    console.log(id);
+    // const id = await value.findIndex(['New York']);
+    // const id = await '5128638';
     console.log(this);
 
     // Fetch city weather data from OpenWeather

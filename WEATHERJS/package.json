@@ -11,5 +11,6 @@
     "json-server": "json-server --watch db.json —-port 3000"
   },
   "author": "Alan Leverenz",
-  "license": "MIT"
+  "license": "MIT",
+  "proxy": "http://localhost:3000"
 }
