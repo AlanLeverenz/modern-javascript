@@ -1,6 +1,26 @@
 {
   "cities": [
     {
+      "id": 5128594,
+      "name": "New York County",
+      "state": "NY",
+      "country": "US",
+      "coord": {
+        "lon": -73.966248,
+        "lat": 40.783428
+      }
+    },
+    {
+      "id": 5128616,
+      "name": "New York Mills",
+      "state": "NY",
+      "country": "US",
+      "coord": {
+        "lon": -75.291283,
+        "lat": 43.10535
+      }
+    },
+    {
       "id": 5128638,
       "name": "New York",
       "state": "NY",
