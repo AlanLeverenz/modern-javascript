@@ -1,53 +1,54 @@
 {
-   "cities": [
-  {
-    "id": 5128638,
-    "name": "New York",
-    "state": "NY",
-    "country": "US",
-    "coord": {
-      "lon": -75.499901,
-      "lat": 43.000351
-    }
-  },
+  "cities": [
     {
-    "id": 4887398,
-    "name": "Chicago",
-    "state": "IL",
-    "country": "US",
-    "coord": {
-      "lon": -87.650047,
-      "lat": 41.850029
-    }
-  },
+      "id": 5128638,
+      "name": "New York",
+      "state": "NY",
+      "country": "US",
+      "coord": {
+        "lon": -75.499901,
+        "lat": 43.000351
+      }
+    },
     {
-    "id": 5110629,
-    "name": "Buffalo",
-    "state": "NY",
-    "country": "US",
-    "coord": {
-      "lon": -78.878372,
-      "lat": 42.886452
-    }
-  },
+      "id": 4887398,
+      "name": "Chicago",
+      "state": "IL",
+      "country": "US",
+      "coord": {
+        "lon": -87.650047,
+        "lat": 41.850029
+      }
+    },
+    {
+      "id": 5110629,
+      "name": "Buffalo",
+      "state": "NY",
+      "country": "US",
+      "coord": {
+        "lon": -78.878372,
+        "lat": 42.886452
+      }
+    },
+    {
       "id": 4930956,
-    "name": "Boston",
-    "state": "MA",
-    "country": "US",
-    "coord": {
-      "lon": -71.059769,
-      "lat": 42.358429
-    }
-  },
+      "name": "Boston",
+      "state": "MA",
+      "country": "US",
+      "coord": {
+        "lon": -71.059769,
+        "lat": 42.358429
+      }
+    },
     {
-    "id": 5391811,
-    "name": "San Diego",
-    "state": "CA",
-    "country": "US",
-    "coord": {
-      "lon": -117.157257,
-      "lat": 32.715328
+      "id": 5391811,
+      "name": "San Diego",
+      "state": "CA",
+      "country": "US",
+      "coord": {
+        "lon": -117.157257,
+        "lat": 32.715328
+      }
     }
-  }
-  ], 
+  ]
 }
