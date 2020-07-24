@@ -91,6 +91,26 @@
       }
     },
     {
+      "id": 5368361,
+      "name": "Los Angeles",
+      "state": "CA",
+      "country": "US",
+      "coord": {
+        "lon": -118.243683,
+        "lat": 34.052231
+      }
+    },
+    {
+      "id": 5391959,
+      "name": "San Francisco",
+      "state": "CA",
+      "country": "US",
+      "coord": {
+        "lon": -122.419418,
+        "lat": 37.774929
+      }
+    },
+    {
       "id": 7262586,
       "name": "Yosemite Valley",
       "state": "CA",
@@ -98,6 +118,16 @@
       "coord": {
         "lon": -119.577881,
         "lat": 37.740749
+      }
+    },
+    {
+      "id": 4464368,
+      "name": "Durham",
+      "state": "NC",
+      "country": "US",
+      "coord": {
+        "lon": -78.898621,
+        "lat": 35.99403
       }
     },
     {
