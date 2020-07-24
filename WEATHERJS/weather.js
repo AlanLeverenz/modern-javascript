@@ -11,10 +11,10 @@ class Weather {
     const promise = await fetch('http://localhost:3000/cities');
     const data = await promise.json();
     const index = data.findIndex(
-      (i) => i.name === 'New York' && i.state === 'NY'
+      (i) => i.name === this.city && i.state === this.state
     );
     const cid = data[index].id;
-    console.log(`index: ${index}, id: ${cid}`);
+    // console.log(`index: ${index}, id: ${cid}`);
 
     // Fetch city weather data from OpenWeather
     const response = await fetch(
@@ -22,8 +22,8 @@ class Weather {
     );
 
     const responseData = await response.json();
-    console.log(responseData);
-    console.log(Math.round(responseData.main.temp * 1.8 - 459.67));
+    // console.log(responseData);
+    // console.log(Math.round(responseData.main.temp * 1.8 - 459.67));
     return responseData;
   }
 
@@ -33,5 +33,3 @@ class Weather {
     this.state = state;
   }
 }
-
-// getWeather('New York', 'NY', '5128638');

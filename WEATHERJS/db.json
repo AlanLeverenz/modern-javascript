@@ -11,6 +11,26 @@
       }
     },
     {
+      "id": 4164138,
+      "name": "Miami",
+      "state": "FL",
+      "country": "US",
+      "coord": {
+        "lon": -80.193657,
+        "lat": 25.774269
+      }
+    },
+    {
+      "id": 5574991,
+      "name": "Boulder",
+      "state": "CO",
+      "country": "US",
+      "coord": {
+        "lon": -105.270554,
+        "lat": 40.014992
+      }
+    },
+    {
       "id": 4887398,
       "name": "Chicago",
       "state": "IL",
@@ -68,6 +88,16 @@
       "coord": {
         "lon": -80.14949,
         "lat": 26.0112
+      }
+    },
+    {
+      "id": 7262586,
+      "name": "Yosemite Valley",
+      "state": "CA",
+      "country": "US",
+      "coord": {
+        "lon": -119.577881,
+        "lat": 37.740749
       }
     },
     {

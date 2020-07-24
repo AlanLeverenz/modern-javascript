@@ -2,7 +2,7 @@
   "name": "weatherjs",
   "version": "1.0.0",
   "description": "weather app",
-  "main": "app.js",
+  "main": "index.html",
   "dependencies": {
     "json-server": "^0.16.1"
   },
