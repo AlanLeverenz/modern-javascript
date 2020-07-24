@@ -1,54 +1,53 @@
 {
-  "cities": [
-    {
-      "id": 5128594,
-      "name": "New York County",
-      "state": "NY",
-      "country": "US",
-      "coord": {
-        "lon": -73.966248,
-        "lat": 40.783428
-      }
-    },
-    {
-      "id": 5128616,
-      "name": "New York Mills",
-      "state": "NY",
-      "country": "US",
-      "coord": {
-        "lon": -75.291283,
-        "lat": 43.10535
-      }
-    },
-    {
-      "id": 5128638,
-      "name": "New York",
-      "state": "NY",
-      "country": "US",
-      "coord": {
-        "lon": -75.499901,
-        "lat": 43.000351
-      }
-    },
-    {
-      "id": 5128639,
-      "name": "Newark",
-      "state": "NY",
-      "country": "US",
-      "coord": {
-        "lon": -77.095253,
-        "lat": 43.04673
-      }
-    },
-    {
-      "id": 5128654,
-      "name": "Newburgh",
-      "state": "NY",
-      "country": "US",
-      "coord": {
-        "lon": -74.010422,
-        "lat": 41.503429
-      }
+   "cities": [
+  {
+    "id": 5128638,
+    "name": "New York",
+    "state": "NY",
+    "country": "US",
+    "coord": {
+      "lon": -75.499901,
+      "lat": 43.000351
     }
-  ]
+  },
+    {
+    "id": 4887398,
+    "name": "Chicago",
+    "state": "IL",
+    "country": "US",
+    "coord": {
+      "lon": -87.650047,
+      "lat": 41.850029
+    }
+  },
+    {
+    "id": 5110629,
+    "name": "Buffalo",
+    "state": "NY",
+    "country": "US",
+    "coord": {
+      "lon": -78.878372,
+      "lat": 42.886452
+    }
+  },
+      "id": 4930956,
+    "name": "Boston",
+    "state": "MA",
+    "country": "US",
+    "coord": {
+      "lon": -71.059769,
+      "lat": 42.358429
+    }
+  },
+    {
+    "id": 5391811,
+    "name": "San Diego",
+    "state": "CA",
+    "country": "US",
+    "coord": {
+      "lon": -117.157257,
+      "lat": 32.715328
+    }
+  }
+  ], 
 }

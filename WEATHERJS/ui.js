@@ -11,12 +11,18 @@ class UI {
     this.icon = document.getElementById('w-icon');
   }
 
+  //   capitalize = (str) => {
+  //     var splitStr = str.toLowerCase().split(' ');
+  //     for (var i = 0; i < splitStr.length; i++) {
+  //       splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
+  //     }
+  //     return splitStr.join(' ');
+  //   };
+
   paint(weather) {
     this.location.textContent = weather.name;
     this.country.textContent = weather.sys.country;
-    this.desc.textContent =
-      weather.weather[0].description[0].toUpperCase() +
-      weather.weather[0].description.slice(1);
+    this.desc.textContent = weather.weather[0].description;
     this.temp.textContent = Math.round(weather.main.temp * 1.8 - 459.67) + ' F';
     this.pressure.textContent = `Pressure: ${weather.main.pressure}`;
     this.humidity.textContent = `Humidity: ${weather.main.humidity}`;
