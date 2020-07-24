@@ -7,18 +7,18 @@ const ui = new UI();
 document.addEventListener('DOMContentLoaded', getWeather);
 
 // Change location event
-document.getElementById('w-change-btn').addEventListener('click', (e) => {
+document.getElementById('w-change-btn').addEventListener('mouseup', (e) => {
   const city = document.getElementById('city').value;
   const state = document.getElementById('state').value;
 
-  weather.changeLocation('Miami', 'FL');
+  weather.changeLocation(city, state);
+
+  // Get and display weather
+  getWeather();
+
+  // Close modal
+  $('#locModal').modal('hide');
 });
-
-// Get and display weather
-getWeather();
-
-// Close modal
-$('#locModal').modal('hide');
 
 function getWeather() {
   weather
