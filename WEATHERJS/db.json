@@ -41,6 +41,36 @@
       }
     },
     {
+      "id": 5393052,
+      "name": "Santa Cruz",
+      "state": "CA",
+      "country": "US",
+      "coord": {
+        "lon": -122.0308,
+        "lat": 36.974121
+      }
+    },
+    {
+      "id": 4634946,
+      "name": "Knoxville",
+      "state": "TN",
+      "country": "US",
+      "coord": {
+        "lon": -83.920738,
+        "lat": 35.96064
+      }
+    },
+    {
+      "id": 4158928,
+      "name": "Hollywood",
+      "state": "FL",
+      "country": "US",
+      "coord": {
+        "lon": -80.14949,
+        "lat": 26.0112
+      }
+    },
+    {
       "id": 5391811,
       "name": "San Diego",
       "state": "CA",
