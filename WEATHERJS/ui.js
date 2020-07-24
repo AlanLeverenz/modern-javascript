@@ -17,10 +17,10 @@ class UI {
     this.desc.textContent = weather.weather[0].description;
     this.temp.textContent = Math.round(weather.main.temp * 1.8 - 459.67) + ' F';
     this.pressure.textContent = `Pressure: ${weather.main.pressure}`;
-    this.humidity.textContent = `Humidity: ${weather.main.humidity}`;
+    this.humidity.textContent = `Humidity: ${weather.main.humidity}%`;
     this.feelsLike.textContent = `Feels like: ${Math.round(
       weather.main.feels_like * 1.8 - 459.67
-    )}`;
+    )} F`;
     this.wind.textContent = `Wind: ${weather.wind.speed}`;
     this.icon.setAttribute(
       'src',
