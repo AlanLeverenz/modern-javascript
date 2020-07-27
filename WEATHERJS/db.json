@@ -131,6 +131,16 @@
       }
     },
     {
+      "id": 5358901,
+      "name": "Idyllwild",
+      "state": "CA",
+      "country": "US",
+      "coord": {
+        "lon": -116.71891,
+        "lat": 33.740021
+      }
+    },
+    {
       "id": 5391811,
       "name": "San Diego",
       "state": "CA",
