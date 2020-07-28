@@ -10,7 +10,7 @@ re = /World$/i; // Must end with
 re = /^hello$/i; // Must begin and end with
 re = /h.llo/i; // Matches any ONE character
 re = /h*llo/i; // Matches any ONE character (or none)
-re = /gra?e?y/i; // Optional character (or none)
+re = /gra?y/i; // Optional character (or none)
 re = /gra?e?y/i; // Optional character (or none)
 re = /gra?e?y\?/i; // Optional character (or none)
 
@@ -36,18 +36,18 @@ re = /\w/; // Word character - alphanumeric or _
 re = /\w+/; // + equals one or more
 re = /\W/; // Non-Word characters and not _
 re = /\d/; // Match any digit
-re = /\d+/; // Match any digit 0 or more times
+re = /\d+/; // Match any digit one or more times
 re = /\D/; // Match any non-digit
 re = /\s/; // Match whitespace
 re = /\S/; // Match non-whitespace
 re = /Hell\b/i; // Word boundary
 
 // Assertions
-re = /x(?=y)/; // Match x only if followed by y
-re = /x(?!y)/; // Match x only if not followed by y
+// re = /x(?=y)/; // Match x only if followed by y
+// re = /x(?!y)/; // Match x only if not followed by y
 
 // String to match
-const str = 'xay';
+const str = 'my hell';
 
 // Log results
 const result = re.exec(str);
@@ -57,7 +57,7 @@ function reTest(re, str) {
   if (re.test(str)) {
     console.log(`${str} matches ${re.source}`);
   } else {
-    console.log(`${str} does NOT match $(re.source})`);
+    console.log(`${str} does NOT match ${re.source})`);
   }
 }
 
