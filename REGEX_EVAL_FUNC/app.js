@@ -4,7 +4,7 @@ re = /hello/i; // i = case insensitive
 // re = /hello/g; // Global search
 
 // console.log(re);
-console.log(re.source);
+// console.log(re.source);
 
 // exec() - Return result in an array or null
 // const result = re.exec('brad hello world');
