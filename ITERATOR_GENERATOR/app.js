@@ -21,7 +21,7 @@
 // console.log(names.next().value);
 // console.log(names.next().value);
 
-// Generator Example
+// Generator Example - generate using 'yield'
 // function* sayNames() {
 //   yield 'Jack';
 //   yield 'Jill';
