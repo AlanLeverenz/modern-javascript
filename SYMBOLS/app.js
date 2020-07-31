@@ -4,7 +4,7 @@ const sym2 = Symbol('sym2');
 
 // console.log(typeof sym2);
 // console.log(Symbol() === Symbol());
-// console.log(`Hello ${String(sym1)}`);
+console.log(`Hello ${String(sym1)}`);
 
 // Unique Object Keys
 const KEY1 = Symbol();
