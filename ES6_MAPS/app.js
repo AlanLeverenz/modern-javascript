@@ -14,7 +14,7 @@ map1.set(key2, 'Value of key2');
 map1.set(key3, 'Value of key3');
 
 // Get values by key
-// console.log(map1.get(key1), map1.get(key2), map1.get(key3));
+console.log(map1.get(key1), map1.get(key2), map1.get(key3));
 
 // Count values
 // console.log(map1.size);
