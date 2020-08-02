@@ -1,5 +1,3 @@
-// NOTE: homeState is persisting on each state change
-
 const PageState = function () {
   let currentState = new homeState(this);
 
@@ -31,7 +29,7 @@ const homeState = function (page) {
 // About State
 const aboutState = function (page) {
   document.querySelector('#heading').textContent = 'About Us';
-  document.querySelector('#heading').innerHTML = `
+  document.querySelector('#content').innerHTML = `
     <p>This is the about page</p>
 `;
 };
@@ -39,7 +37,7 @@ const aboutState = function (page) {
 // Contact State
 const contactState = function (page) {
   document.querySelector('#heading').textContent = 'Contact Us';
-  document.querySelector('#heading').innerHTML = `
+  document.querySelector('#content').innerHTML = `
         <form>
             <div class="form-group">
                 <label>Name</label>
