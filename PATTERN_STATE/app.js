@@ -1,3 +1,5 @@
+// NOTE: homeState is persisting on each state change
+
 const PageState = function () {
   let currentState = new homeState(this);
 
